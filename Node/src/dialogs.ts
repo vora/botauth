@@ -112,7 +112,7 @@ export class AuthDialog extends builder.Dialog {
                 msg = new builder.Message(session)
                     .attachments([
                         new builder.SigninCard(session)
-                        .text(args.providerId === 'azuread-openidconnect' ? args.skypeSignIn : "connect_prompt")
+                        .text(opt.providerId === 'azuread-openidconnect' ? opt.skypeSignIn : "connect_prompt")
                             .button("connect_button", opt.buttonUrl)
                     ]);
         }
