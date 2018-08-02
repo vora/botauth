@@ -189,7 +189,8 @@ export class BotAuthenticator {
                         providerId: providerId,
                         buttonUrl: this.authUrl(providerId, cxt),
                         originalArgs: args ? args.response : {},
-                        skypeSignIn: "Click the button below to sign in to Skype, then paste the code you’re given below to authenticate"
+                        skypeSignIn: "Click the button below to sign in to Skype, then paste the code you’re given below to authenticate",
+                        skypeSignInButton: "Skype Sign In"
                     });
                 }
             },
