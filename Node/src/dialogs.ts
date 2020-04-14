@@ -129,7 +129,8 @@ export class AuthDialog extends builder.Dialog {
         let challenge: string = session.conversationData.challenge;
         let userEntered: string = session.message.text;
         let response: IChallengeResponse;
-
+        userEntered = userEntered.replace(/(\r\n|\n|\r)/gm, "");
+        
         let clearResponse = (mk: string) => {
             if (mk && session.conversationData.botauth && session.conversationData.responses) {
                 // clear the challenge information
