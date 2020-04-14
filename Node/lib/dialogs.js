@@ -55,6 +55,8 @@ class AuthDialog extends builder.Dialog {
         let challenge = session.conversationData.challenge;
         let userEntered = session.message.text;
         let response;
+        userEntered = userEntered.replace(/(\r\n|\n|\r)/gm, "");
+        
         let clearResponse = (mk) => {
             if (mk && session.conversationData.botauth && session.conversationData.responses) {
                 delete session.conversationData.botauth.responses[mk];
